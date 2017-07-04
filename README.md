@@ -1,5 +1,7 @@
 # Angular CLI GitHub Pages test App
 
+Refactored the [Tutorial: Tour of Heroes](https://angular.io/tutorial) code, implementing using the CLI, using Bootstrap styling, connecting to an actual REST API backend, etc...
+------------------
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
 
 ## Development server
