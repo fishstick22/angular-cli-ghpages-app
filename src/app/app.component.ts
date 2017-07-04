@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular CLI GitHub Pages test App';
+  title = 'Angular CLI GitHub Pages test App (Tour of Heroes)';
 }
