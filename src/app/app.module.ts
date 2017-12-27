@@ -4,8 +4,8 @@ import { FormsModule }    from '@angular/forms';
 import { HttpModule }     from '@angular/http';
 
 // Imports for loading & configuring the in-memory web api
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './services/in-memory-data.service';
+// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryDataService }  from './services/in-memory-data.service';
 
 import { AppRoutingModule }    from './app-routing.module';
 import { AppComponent }        from './app.component';
@@ -14,6 +14,9 @@ import { HeroListComponent }   from './components/hero-list/hero-list.component'
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 import { HeroSearchComponent } from './components/hero-search/hero-search.component';
 import { HeroService }         from './services/hero.service';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { AuthenticationService } from './services/authentication.service';
 
 @NgModule({
   declarations: [
@@ -21,16 +24,18 @@ import { HeroService }         from './services/hero.service';
     DashboardComponent,
     HeroListComponent,
     HeroDetailComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    // InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
-  providers: [HeroService],
+  providers: [HeroService, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
